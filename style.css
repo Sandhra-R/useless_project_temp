@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #20232a;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 40px 0 30px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    background: #111827;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #6b7280;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.section-title h2,
+.card h2 {
+    font-size: 19px;
+}
+
+#wordCount {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================= TEXTAREA ================= */
+
+textarea {
+    width: 100%;
+    height: 170px;
+
+    resize: vertical;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 16px;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+textarea:focus {
+    border-color: #6366f1;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+#charCount {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.clear-btn {
+    border: none;
+    background: transparent;
+    color: #ef4444;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* ================= STYLE BUTTONS ================= */
+
+.style-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.style-btn {
+    background: #f9fafb;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 24px;
+
+    transition: 0.2s;
+}
+
+.style-btn span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.style-btn:hover {
+    transform: translateY(-2px);
+    border-color: #6366f1;
+}
+
+.style-btn.active {
+    border-color: #6366f1;
+    background: #eef2ff;
+}
+
+
+/* ================= TRANSLATE BUTTON ================= */
+
+.translate-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 17px;
+
+    border-radius: 14px;
+
+    background: #111827;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+
+    transition: 0.2s;
+}
+
+.translate-btn:hover {
+    transform: translateY(-2px);
+    background: #1f2937;
+}
+
+.translate-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ================= OUTPUT ================= */
+
+.output-card {
+    min-height: 220px;
+}
+
+.output {
+    min-height: 130px;
+
+    background: #f9fafb;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    line-height: 1.7;
+
+    color: #374151;
+}
+
+.copy-btn {
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #f3f4f6;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    font-size: 25px;
+}
+
+.stat-card p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin: 8px 0;
+}
+
+.stat-card h3 {
+    font-size: 24px;
+}
+
+
+/* ================= VERDICT ================= */
+
+.verdict {
+    background: #111827;
+
+    color: white;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.verdict-icon {
+    font-size: 35px;
+}
+
+.verdict h3 {
+    margin-bottom: 5px;
+}
+
+.verdict p {
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px 0 40px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .style-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 94%;
+    }
+
+    header {
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
