@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Nonsense Translator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div class="logo">🤖</div>
+
+            <div>
+                <h1>Nonsense Translator</h1>
+                <p>Say something simple. We'll make it unnecessarily complicated.</p>
+            </div>
+        </header>
+
+
+        <!-- Main Translator -->
+        <main>
+
+            <!-- Input Section -->
+            <section class="card">
+
+                <div class="section-title">
+                    <h2>📝 Your Sentence</h2>
+
+                    <span id="wordCount">
+                        0 words
+                    </span>
+                </div>
+
+                <textarea
+                    id="inputText"
+                    placeholder="Type something simple here...
+
+Example:
+I am late because I woke up late."
+                    maxlength="500"
+                ></textarea>
+
+                <div class="bottom-row">
+
+                    <span id="charCount">
+                        0 / 500
+                    </span>
+
+                    <button class="clear-btn" onclick="clearText()">
+                        Clear
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Style Selection -->
+            <section class="card">
+
+                <h2>🎭 Choose Your Nonsense Style</h2>
+
+                <div class="style-grid">
+
+                    <button class="style-btn active"
+                            data-style="corporate"
+                            onclick="selectStyle(this)">
+                        💼
+                        <span>Corporate</span>
+                    </button>
+
+                    <button class="style-btn"
+                            data-style="academic"
+                            onclick="selectStyle(this)">
+                        🎓
+                        <span>Academic</span>
+                    </button>
+
+                    <button class="style-btn"
+                            data-style="government"
+                            onclick="selectStyle(this)">
+                        🏛️
+                        <span>Government</span>
+                    </button>
+
+                    <button class="style-btn"
+                            data-style="legal"
+                            onclick="selectStyle(this)">
+                        ⚖️
+                        <span>Legal</span>
+                    </button>
+
+                    <button class="style-btn"
+                            data-style="ai"
+                            onclick="selectStyle(this)">
+                        🤖
+                        <span>AI</span>
+                    </button>
+
+                    <button class="style-btn"
+                            data-style="ridiculous"
+                            onclick="selectStyle(this)">
+                        🤯
+                        <span>Ridiculous</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Translate Button -->
+            <button class="translate-btn" onclick="translateText()">
+                🚀 Translate to Nonsense
+            </button>
+
+
+            <!-- Output Section -->
+            <section class="card output-card">
+
+                <div class="section-title">
+
+                    <h2>🧪 Nonsense Output</h2>
+
+                    <button
+                        id="copyBtn"
+                        class="copy-btn"
+                        onclick="copyOutput()">
+                        📋 Copy
+                    </button>
+
+                </div>
+
+                <div id="outputText" class="output">
+                    Your unnecessarily complicated sentence will appear here...
+                </div>
+
+            </section>
+
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <span class="stat-icon">📊</span>
+                    <p>Original Words</p>
+                    <h3 id="originalWords">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">📈</span>
+                    <p>Nonsense Words</p>
+                    <h3 id="nonsenseWords">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">🤯</span>
+                    <p>Nonsense Score</p>
+                    <h3 id="nonsenseScore">0%</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">📈</span>
+                    <p>Word Inflation</p>
+                    <h3 id="wordInflation">0%</h3>
+                </div>
+
+            </section>
+
+
+            <!-- Funny Verdict -->
+            <section class="verdict" id="verdict">
+
+                <div class="verdict-icon">
+                    🧪
+                </div>
+
+                <div>
+                    <h3>Scientific Verdict</h3>
+
+                    <p id="verdictText">
+                        Enter a sentence and unleash unnecessary vocabulary.
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                🤖 Nonsense Translator • Making simple things unnecessarily complicated
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
